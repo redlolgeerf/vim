@@ -66,7 +66,7 @@ else
 return "\<c-p>"
 endif
 endfunction
-imap <c-r>=InsertTabWrapper()"Показываем все полезные опции автокомплита сразу
+imap <c-r> InsertTabWrapper()"Показываем все полезные опции автокомплита сразу
 set complete=""
 set complete+=.
 set complete+=k
