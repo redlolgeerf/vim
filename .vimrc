@@ -10,6 +10,9 @@ Plugin 'gmarik/vundle'
 
 Plugin 'klen/python-mode'
 
+Plugin 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR> "open NerdTree with Ctrl+n
+
 Plugin 'vim-scripts/desert.vim', {'rtp': 'colors/'}
 
 " scripts from http://vim-scripts.org/vim/scripts.html
@@ -34,3 +37,5 @@ colorscheme desert "Цветовая схема
 set nu "Включаем нумерацию строк
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
+
+syntax on
