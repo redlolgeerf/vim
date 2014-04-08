@@ -82,3 +82,14 @@ set mouse=a "Включить поддержку мыши
 "сокращение для добавления кодировки
 iab utf! # -*- coding: utf-8 -*-
 syntax on
+
+"отображение скрытых символов
+if has('multi_byte')
+    if version >= 700
+        " set listchars=tab:»\ ,trail:·,eol:¶,extends:→,precedes:←,nbsp:×
+        set listchars=tab:▸\ ,eol:¬ # TextMate
+    else
+        set listchars=tab:»\ ,trail:·,eol:¶,extends:>,precedes:<,nbsp:_
+    endif
+endif
+nmap <leader>h :set list!<CR>
