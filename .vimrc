@@ -57,6 +57,8 @@ nmap <leader>t :NERDTreeToggle<CR>
 
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'Raimondi/delimitMate'
+
 Plugin 'vim-scripts/desert.vim', {'rtp': 'colors/'}
 
 " scripts from http://vim-scripts.org/vim/scripts.html
