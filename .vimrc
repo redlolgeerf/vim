@@ -87,7 +87,7 @@ syntax on
 if has('multi_byte')
     if version >= 700
         " set listchars=tab:»\ ,trail:·,eol:¶,extends:→,precedes:←,nbsp:×
-        set listchars=tab:▸\ ,eol:¬ # TextMate
+        set listchars=tab:▸\ ,eol:¬
     else
         set listchars=tab:»\ ,trail:·,eol:¶,extends:>,precedes:<,nbsp:_
     endif
