@@ -87,14 +87,12 @@ set mouse=a "Включить поддержку мыши
 "сокращение для добавления кодировки
 iab bin! # !/usr/bin/python3
 iab utf! # -*- coding: utf-8 -*-
-<<<<<<< HEAD
 iab main! if __name__ == '__main__':
 "syntax on
 "Включаем 256 цветов в терминале, мы ведь работаем из иксов?
 "Нужно во многих терминалах, например в gnome-terminal
 set t_Co=256
 set background=dark
-=======
 syntax on
 
 "отображение скрытых символов
@@ -107,4 +105,3 @@ if has('multi_byte')
     endif
 endif
 nmap <leader>h :set list!<CR>
->>>>>>> 1d0dcb2c08ee2bffe857ce5144f58317b227929d
