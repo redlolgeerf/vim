@@ -10,7 +10,10 @@ Plugin 'gmarik/vundle'
 
 Plugin 'klen/python-mode'
 " check code
+" let g:pymode_python = 'python3'
 nmap <leader>c :PymodeLint<CR>
+"Подсвечиваем все что можно подсвечивать
+let python_highlight_all = 1
 "Turn on pymode syntax
 let g:pymode_syntax = 1
 "Slower syntax synchronization
