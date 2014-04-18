@@ -105,3 +105,17 @@ if has('multi_byte')
     endif
 endif
 nmap <leader>h :set list!<CR>
+
+"switching between tabs
+nnoremap <F1> :tabprevious<CR>
+nnoremap <F2> :tabnext<CR>
+"open new tab
+nnoremap <C-w>t :tabedit<CR>
+
+"fixing backspace behavior
+set backspace=2
+
+"show diff from previously saved version
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+	 	\ | wincmd p | diffthis
+nmap <leader>d :DiffOrig<CR>
