@@ -51,6 +51,9 @@ let g:pymode_syntax_highlight_exceptions = g:pymode_syntax_all
 "                                                  *'g:pymode_syntax_docstrings'*
 let g:pymode_syntax_docstrings = g:pymode_syntax_all
 
+"turn off completion afer dot
+let g:pymode_rope_complete_on_dot = 0
+
 Plugin 'scrooloose/nerdtree'
 "open NerdTree with leader+t
 nmap <leader>t :NERDTreeToggle<CR> 
@@ -60,6 +63,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Raimondi/delimitMate'
 
 Plugin 'vim-scripts/desert.vim', {'rtp': 'colors/'}
+
+"plugin for indentation line
+Plugin 'Yggdroot/indentLine'
 
 " scripts from http://vim-scripts.org/vim/scripts.html
 
