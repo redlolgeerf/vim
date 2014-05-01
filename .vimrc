@@ -96,7 +96,7 @@ set mousehide "Спрятать курсор мыши когда набирае�
 set mouse=a "Включить поддержку мыши
 
 "сокращение для добавления кодировки
-iab bin! # !/usr/bin/python3
+iab bin! # !/usr/bin/env python3
 iab utf! # -*- coding: utf-8 -*-
 iab main! if __name__ == '__main__':
 "syntax on
@@ -122,6 +122,10 @@ nnoremap <F1> :tabprevious<CR>
 nnoremap <F2> :tabnext<CR>
 "open new tab
 nnoremap <C-w>t :tabedit<CR>
+
+" highlight collumn end
+set colorcolumn=79
+highlight ColorColumn ctermbg=darkgray
 
 "fixing backspace behavior
 set backspace=2
