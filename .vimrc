@@ -54,6 +54,11 @@ let g:pymode_syntax_docstrings = g:pymode_syntax_all
 "turn off completion afer dot
 let g:pymode_rope_complete_on_dot = 0
 
+"turn off code checking on every save
+let g:pymode_lint_on_write = 0
+"turn off window with errors
+let g:pymode_lint_cwindow = 0
+
 Plugin 'scrooloose/nerdtree'
 "open NerdTree with leader+t
 nmap <leader>t :NERDTreeToggle<CR> 
