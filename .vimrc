@@ -89,6 +89,20 @@ highlight ColorColumn ctermbg=darkgray
 "fixing backspace behavior
 set backspace=2
 
+" Don't try to highlight lines longer than 200 characters.
+set synmaxcol=200
+
+" Search options
+set hlsearch " Highlight search results
+set ignorecase " Ignore case in search patterns
+set smartcase " Override the 'ignorecase' option if the search pattern contains upper case characters
+set incsearch " While typing a search command, show where the pattern
+
+" Tab completion in command line mode
+set wildmenu " Better commandline completion
+set wildmode=longest:full,full " Expand match on first Tab complete
+set wildcharm=<TAB>
+
 "show diff from previously saved version
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
