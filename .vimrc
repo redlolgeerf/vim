@@ -13,6 +13,14 @@ Plugin 'davidhalter/jedi-vim'
 let g:jedi#popup_on_dot = 0
 "select first option on autocomplete
 let g:jedi#popup_select_first = 0
+"force python vercion to 3
+let g:jedi#force_py_version = 3
+
+Plugin 'scrooloose/syntastic'
+let g:syntastic_python_checkers = ['pylint', 'pylama']
+let g:syntastic_always_populate_loc_list = 1
+nmap <leader>c :SyntasticCheck<CR> 
+
 
 Plugin 'scrooloose/nerdtree'
 "open NerdTree with leader+t
@@ -106,4 +114,4 @@ set wildcharm=<TAB>
 "show diff from previously saved version
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
-nmap <leader>d :DiffOrig<CR>
+nmap <leader>p :DiffOrig<CR>
