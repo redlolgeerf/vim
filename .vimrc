@@ -90,9 +90,12 @@ nnoremap <F2> :tabnext<CR>
 "open new tab
 nnoremap <C-w>t :tabedit<CR>
 
-" highlight collumn end
-set colorcolumn=79
-highlight ColorColumn ctermbg=darkgray
+" highlight collumn end for python files only
+function SetLimit()
+	set colorcolumn=79
+	highlight ColorColumn ctermbg=darkgray
+endfunction
+autocmd FileType python call SetLimit()
 
 "fixing backspace behavior
 set backspace=2
