@@ -30,7 +30,7 @@ Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Raimondi/delimitMate'
 
-Plugin 'vim-scripts/desert.vim', {'rtp': 'colors/'}
+Plugin 'sjl/badwolf'
 
 "plugin for indentation line
 Plugin 'Yggdroot/indentLine'
@@ -53,7 +53,7 @@ set encoding=utf-8 " Кодировка файлов по умолчанию
 set fileencodings=utf8,cp1251 " Возможные кодировки файлов, если файл не в unicode кодировке,
 " то будет использоваться cp1251
 
-colorscheme desert "Цветовая схема
+colorscheme badwolf "Цветовая схема
 set nu "Включаем нумерацию строк
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
@@ -62,12 +62,13 @@ set mouse=a "Включить поддержку мыши
 iab bin! # !/usr/bin/env python3
 iab utf! # -*- coding: utf-8 -*-
 iab main! if __name__ == '__main__':
-"syntax on
+"
 "Включаем 256 цветов в терминале, мы ведь работаем из иксов?
 "Нужно во многих терминалах, например в gnome-terminal
 set t_Co=256
 set background=dark
 syntax on
+syntax enable
 
 "отображение скрытых символов
 if has('multi_byte')
