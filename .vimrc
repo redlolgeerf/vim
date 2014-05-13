@@ -30,7 +30,8 @@ Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Raimondi/delimitMate'
 
-Plugin 'vim-scripts/desert.vim', {'rtp': 'colors/'}
+Plugin 'sjl/badwolf'
+"Plugin 'vim-scripts/desert.vim', {'rtp': 'colors/'}
 
 "plugin for indentation line
 Plugin 'Yggdroot/indentLine'
@@ -53,7 +54,7 @@ set encoding=utf-8 " Кодировка файлов по умолчанию
 set fileencodings=utf8,cp1251 " Возможные кодировки файлов, если файл не в unicode кодировке,
 " то будет использоваться cp1251
 
-colorscheme desert "Цветовая схема
+colorscheme badwolf "Цветовая схема
 set nu "Включаем нумерацию строк
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
