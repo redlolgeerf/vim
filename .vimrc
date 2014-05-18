@@ -21,6 +21,7 @@ let g:syntastic_python_checkers = ['pylint', 'pylama']
 let g:syntastic_always_populate_loc_list = 1
 nmap <leader>c :SyntasticCheck<CR> 
 
+Plugin 'lambdalisue/vim-django-support'
 
 Plugin 'scrooloose/nerdtree'
 "open NerdTree with leader+t
@@ -39,6 +40,17 @@ Plugin 'Yggdroot/indentLine'
 " scripts from http://vim-scripts.org/vim/scripts.html
 
 filetype plugin indent on
+
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab "Ставим табы пробелами
+set softtabstop=4 "4 пробела в табе
+"Автоотступ
+set autoindent
+"Подсвечиваем все что можно подсвечивать
+let python_highlight_all = 1
+
 
 "Вырубаем .swp и ~ (резервные) файлы
 set nobackup
@@ -63,7 +75,7 @@ set mouse=a "Включить поддержку мыши
 iab bin! # !/usr/bin/env python3
 iab utf! # -*- coding: utf-8 -*-
 iab main! if __name__ == '__main__':
-"syntax on
+"
 "Включаем 256 цветов в терминале, мы ведь работаем из иксов?
 "Нужно во многих терминалах, например в gnome-terminal
 set t_Co=256
@@ -119,3 +131,27 @@ set wildcharm=<TAB>
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 nmap <leader>p :DiffOrig<CR>
+
+fun! DetectTemplate()
+  let n = 1
+  while n < line("$")
+    if getline(n) =~ '{%' || getline(n) =~ '{{'
+      set ft=htmldjango
+      return
+    endif
+    let n = n + 1
+  endwhile
+  set ft=html "default html
+endfun
+autocmd BufNewFile,BufRead *.html call DetectTemplate()
+
+" make hjkl movements accessible from insert mode via the <Alt> modifier key
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+inoremap <C-w> <C-o>w
+inoremap <C-b> <C-o>b
+
+" Use the OS clipboard by default
+set clipboard=unnamed
