@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
@@ -74,6 +74,7 @@ Plugin 'Yggdroot/indentLine'
 
 " scripts from http://vim-scripts.org/vim/scripts.html
 
+call vundle#end()  
 filetype plugin indent on
 
 "Вырубаем .swp и ~ (резервные) файлы
