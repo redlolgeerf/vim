@@ -37,9 +37,22 @@ Plugin 'sjl/badwolf'
 "plugin for indentation line
 Plugin 'Yggdroot/indentLine'
 
+"plugin for working with sql
+Plugin 'vim-scripts/dbext.vim'
+" SQLite
+let g:dbext_default_profile_sqlite_master = 'type=SQLITE:SQLITE_bin=sqlite3:dbname=~/Projects/hydra/db/main.sqlite'
+let g:dbext_default_profile_sqlite_master_old = 'type=SQLITE:SQLITE_bin=sqlite3:dbname=~/Projects/hydra/db/main.sqlite.old'
+let g:dbext_default_profile_sqlite_test = 'type=SQLITE:SQLITE_bin=sqlite3:dbname=~/dev/hydra/db/main.sqlite'
+
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+set rtp+=$HOME/.vim/bundle/powerline/powerline/lib/python2.7/site-packages/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
 " scripts from http://vim-scripts.org/vim/scripts.html
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()  
+filetype plugin on
 filetype plugin indent on
 
 set tabstop=4
@@ -73,7 +86,7 @@ set mousehide "Спрятать курсор мыши когда набирае�
 set mouse=a "Включить поддержку мыши
 
 "сокращение для добавления кодировки
-iab bin! # !/usr/bin/env python3
+iab bin! #! /usr/bin/env python3
 iab utf! # -*- coding: utf-8 -*-
 iab main! if __name__ == '__main__':
 "
@@ -82,6 +95,11 @@ iab main! if __name__ == '__main__':
 set t_Co=256
 set background=dark
 syntax on
+
+"font
+if has('gui_running')
+    set guifont=Inconsolata\ 12
+endif
 
 "отображение скрытых символов
 if has('multi_byte')
