@@ -6,7 +6,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/vundle' 
+
+Plugin 'kien/ctrlp.vim' 
+
+Plugin 'majutsushi/tagbar' 
+nmap <F8> :TagbarToggle<CR>
+
+Plugin 'kien/rainbow_parentheses.vim' 
+nmap <F9> :RainbowParenthesesToggle<CR>
+au VimEnter * RainbowParenthesesToggle
+au VimEnter * RainbowParenthesesLoadRound
+au VimEnter * RainbowParenthesesLoadSquare
+au VimEnter * RainbowParenthesesLoadBraces
 
 Plugin 'davidhalter/jedi-vim'
 "no autocompletion on dot
