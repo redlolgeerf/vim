@@ -14,8 +14,8 @@ Plugin 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
 Plugin 'kien/rainbow_parentheses.vim' 
-nmap <F9> :RainbowParenthesesToggle<CR>
-au VimEnter * RainbowParenthesesToggle
+nmap <F9> :RainbowParenthesesToggleAll<CR>
+au VimEnter * RainbowParenthesesToggleAll
 au VimEnter * RainbowParenthesesLoadRound
 au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
