@@ -10,6 +10,8 @@ Plugin 'gmarik/vundle'
 
 Plugin 'kien/ctrlp.vim' 
 
+Plugin 'ervandew/supertab' 
+
 Plugin 'majutsushi/tagbar' 
 nmap <F8> :TagbarToggle<CR>
 
@@ -20,6 +22,8 @@ au VimEnter * RainbowParenthesesLoadRound
 au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
 
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'davidhalter/jedi-vim'
 "no autocompletion on dot
 let g:jedi#popup_on_dot = 0
@@ -29,7 +33,7 @@ let g:jedi#popup_select_first = 0
 let g:jedi#force_py_version = 3
 
 Plugin 'scrooloose/syntastic'
-let g:syntastic_python_checkers = ['pylint', 'pylama']
+let g:syntastic_python_checkers = ['pylint', 'pylama', 'pep8', 'flake8', 'pyflakes']
 let g:syntastic_always_populate_loc_list = 1
 nmap <leader>c :SyntasticCheck<CR> 
 
@@ -38,8 +42,6 @@ Plugin 'lambdalisue/vim-django-support'
 Plugin 'scrooloose/nerdtree'
 "open NerdTree with leader+t
 nmap <leader>t :NERDTreeToggle<CR> 
-
-Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Raimondi/delimitMate'
 
