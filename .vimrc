@@ -188,3 +188,7 @@ inoremap <C-b> <C-o>b
 
 " Use the OS clipboard by default
 set clipboard=unnamed
+
+" remove menu
+set guioptions-=m
+set guioptions-=T
