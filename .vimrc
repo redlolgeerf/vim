@@ -192,3 +192,6 @@ set clipboard=unnamed
 " remove menu
 set guioptions-=m
 set guioptions-=T
+
+set spelllang=ru_ru,en_us
+nmap <F6> :set spell<CR>
