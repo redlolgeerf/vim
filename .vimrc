@@ -8,9 +8,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle' 
 
-Plugin 'kien/ctrlp.vim' 
+Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'ervandew/supertab' 
+Plugin 'kien/ctrlp.vim' 
 
 Plugin 'majutsushi/tagbar' 
 nmap <F8> :TagbarToggle<CR>
@@ -25,12 +25,8 @@ au VimEnter * RainbowParenthesesLoadBraces
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'davidhalter/jedi-vim'
-"no autocompletion on dot
-let g:jedi#popup_on_dot = 0
-"select first option on autocomplete
-let g:jedi#popup_select_first = 0
-"force python vercion to 3
-let g:jedi#force_py_version = 3
+"no autocompletion
+let g:jedi#completions_enabled = 0
 
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint', 'pylama', 'pep8', 'flake8', 'pyflakes']
